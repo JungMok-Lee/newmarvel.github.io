@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3000만큼 사랑해</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>나의 마블일기</h1>
+    <br>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'introduce' %}" role="button" aria-haspopup="true" aria-expanded="false">소개</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'maker' %}">만든이</a>
+                <a class="dropdown-item" href="{% url 'aboutmarvel' %}">About Marvel Studio!</a>
+                <a class="dropdown-item" href="{% url 'motivation' %}">제작동기</a>
+                <a class="dropdown-item" href="{% url 'process' %}">과정</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'movie' %}" role="button" aria-haspopup="true" aria-expanded="false">영화 관련 정보</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'trailer' %}">트레일러 모음집</a>
+              <a class="dropdown-item" href="{% url 'audience' %}">관객 수</a>
+              <a class="dropdown-item" href="{% url 'plan' %}">영화 일정</a>
+              <a class="dropdown-item" href="{% url 'news' %}">기사</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'character' %}" role="button" aria-haspopup="true" aria-expanded="false">캐릭터</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'captain' %}">Captain America</a>
+              <a class="dropdown-item" href="{% url 'ironman' %}">Iron Man</a>
+              <a class="dropdown-item" href="{% url 'blackwidow' %}">Black Widow</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'wintersoldier' %}">My Winter Soldier</a>
+            </div>
+          </li>
+        </li>
+        </ul>
+    {% block content %}
+
+    {% endblock %}
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">제가 만들 었 숩니다</h5>
+        <p class="card-text">제작자 이정목 카카오뱅크 3333144486538</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">홈으로 돌아가기!</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+</body>
+</html>
