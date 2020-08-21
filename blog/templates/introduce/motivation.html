@@ -1,1 +1,15 @@
-<p>motivation page</p>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="kor">
+<link rel="stylesheet" href="{% static 'css/introduce/motivation.css' %}">
+<body>
+    <div class="reason">
+        <p>
+            멋사 개인 프로젝트입니당. 열심히 할게용.
+        </p>
+    </div>
+</body>
+</html>
+{% endblock %}

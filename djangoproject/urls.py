@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import blog.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,4 +40,8 @@ urlpatterns = [
     path('blog/character/ironman', blog.views.ironman, name="ironman"),
     path('blog/character/blackwidow', blog.views.blackwidow, name="blackwidow"),
     path('blog/character/wintersoldier', blog.views.wintersoldier, name="wintersoldier"),
-]
+
+
+    
+
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -1,1 +1,11 @@
-<p>aboutmarvel page</p>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/introduce/aboutmarvel.css' %}">
+<div class="marvel">
+    MARVEL
+</div>
+<div class="any">
+    <p>aboutmarvel page</p>
+</div>
+{% endblock %}

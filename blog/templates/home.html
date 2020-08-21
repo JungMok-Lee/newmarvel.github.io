@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static home.css %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 <body>
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -11,24 +11,25 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{% static 'images/marvellogo.jpg' %}" alt="marvel logo.jpg">
+            <img src="{% static 'images/marvellogo3.jpg' %}" alt="marvel logo.jpg" class="firstpic">
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <link href="stylesheet" href="{% static home.css %}">
+              <h5>MARVEL</h5>
+              <p>LOGO OF MARVEL</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{% static 'images/marvelconference.jpg' %}" alt="marvel logo.jpg">
+            <img src="{% static 'images/marvelconference.jpg' %}" alt="marvel logo.jpg" class="secondpic">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5>IRONMAN CONFERENCE</h5>
+              <p>IRONMAN IS ON THE RIGHT</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{% static 'images/sebastian.jpg' %}" alt="marvel logo.jpg">
+            <img src="{% static 'images/sebastian.jpg' %}" alt="marvel logo.jpg" class="thirdpic">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <h5>MY LITTLE SEBASTIAN</h5>
+              <p>MY LITTLE BUCKY BARNS...</p>
             </div>
           </div>
         </div>
